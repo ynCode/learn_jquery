@@ -4,3 +4,4 @@ jQuery(document).ready(function($) {
         $(this).next().html(likeNum + 1);
     });
 });
+
