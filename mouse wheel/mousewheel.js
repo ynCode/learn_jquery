@@ -8,8 +8,7 @@ jQuery(document).ready(function ($) {
             linkNum = thisobj.index();
         } else if (thisobj.prop('tagName') == 'DIV') {
             linkNum = thisobj.index() + 1;
-        }
-        ;
+        };
         $('header nav').children('a').eq(linkNum).addClass('active');
         $('.nav-side').children('a').eq(linkNum).addClass('active');
     }
@@ -49,8 +48,7 @@ jQuery(document).ready(function ($) {
                     addClassActive($(this));
                 });
 
-            }
-            ;
+            };
 
         } else if (event.deltaY == 1) { // if mouse wheel on
 
@@ -72,10 +70,8 @@ jQuery(document).ready(function ($) {
                     addClassActive($(this));
                 });
 
-            }
-            ;
+            };
 
-        }
-        ;
+        };
     });
 });
