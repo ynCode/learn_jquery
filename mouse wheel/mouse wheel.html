@@ -3,91 +3,22 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Document</title>
-    <style>
-    * {
-        margin: 0;
-        border: none;
-        padding: 0;
-    }
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.3);
-    }
-    header nav {
-        width: 80%;
-        margin: 0 auto;
-    }
-    header nav,
-    header nav ul {
-        display: inline-block;
-    }
-    header nav ul li {
-        float: left;
-        list-style: none;
-        font-size: 0.3em;
-        padding: 0.3em;
-        color: white;
-    }
-    a {
-        text-decoration: none;
-    }
-    a:visited,
-    a:link {
-        color: white;
-    }
-    a:hover {
-        color: rgba(255, 255, 255, 0.5);
-    }
-    body {
-        display: block;
-        background: url(bg.jpg);
-        font-family: Arial;
-        font-weight: bold;
-        color: white;
-        font-size: 6em;
-        text-align: center;
-    }
-    .warp {
-        position: fixed;
-        top: 50px;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.1);
-    }
-    .warp div {
-        display: none;
-    }
-    .warp div:first-child {
-        display: block;
-    }
-    div p {
-        position: absolute;
-        top: 50%;
-        left: 60%;
-        margin-top: -0.5em;
-        margin-left: -6.5em
-    }
-    </style>
+    <title>mouse wheel</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+
     <header>
+
         <nav>
-            <ul>
-                <li><a href="#1">div1</a>
-                </li>
-                <li><a href="#2">div2</a>
-                </li>
-                <li><a href="#3">div3</a>
-                </li>
-            </ul>
+            <a href="#1" class="active">div1</a>
+            <a href="#2">div2</a>
+            <a href="#3">div3</a>
         </nav>
+
     </header>
+
     <div class="warp">
         <div class="mouse-on" id="1">
             <p>this is div 1</p>
@@ -99,6 +30,12 @@
             <p>this is div 3</p>
         </div>
     </div>
+
+    <nav class="nav-side">
+        <a href="#1" class="active">div1</a>
+        <a href="#2">div2</a>
+        <a href="#3">div3</a>
+    </nav>
 
     <script src="../lib/js/jquery.min.js"></script>
     <script src="jquery.mousewheel.min.js"></script>
