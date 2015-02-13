@@ -3,14 +3,7 @@ jQuery(document).ready(function($) {
     function addClassActive(thisobj) {
 
         $('a').removeClass('active');
-        console.log(thisobj.prop('tagName'));
-        // if (thisobj.prop('tagName') == 'A') {
-        //     linkNum = thisobj.index();
-        // } else if (thisobj.prop('tagName') == 'DIV') {
-        //     linkNum = thisobj.index() + 1;
-        // };
         linkNum = thisobj.index();
-        console.log(linkNum);
         $('header nav').children('a').eq(linkNum).addClass('active');
         $('.nav-side').children('a').eq(linkNum).addClass('active');
         
@@ -51,7 +44,7 @@ jQuery(document).ready(function($) {
                 $('.mouse-on').hide(function() {
                     $(this).removeClass('mouse-on');
                     $('.warp div:first-child').addClass('mouse-on').show('slow');
-                    addClassActive('.warp div:first-child');
+                    addClassActive($('.warp div:first-child'));
                 });
 
             };
@@ -72,7 +65,7 @@ jQuery(document).ready(function($) {
                 $('.mouse-on').hide('slow', function() {
                     $(this).removeClass('mouse-on');
                     $('.warp div:last-child').addClass('mouse-on').show('slow');
-                    addClassActive('.warp div:last-child');
+                    addClassActive($('.warp div:last-child'));
                 });
 
             };
